@@ -3,6 +3,7 @@ package edu.cis232;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MainMethod {
 
@@ -13,14 +14,19 @@ public class MainMethod {
 		
 		
 		try{
-			File inputFile = new File();
+			File File = new File("ShapeName.txt");
+			Scanner inputFile = new Scanner(File);
 			
 			while (inputFile.hasNext()){
+				message = inputFile.nextLine();
+				
+				System.out.println(message);
 				
 			}
+			inputFile.close();
 		}
 		
-		catch(IOExcetion IOError){
+		catch(IOException IOError){
 			
 			message = "Error:" + IOError;
 		}
